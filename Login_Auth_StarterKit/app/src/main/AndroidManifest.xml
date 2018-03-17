@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bee.passenger">
+    package="tech.ioengine.Login">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -43,7 +43,6 @@
     <supports-screens android:anyDensity="true" />
 
     <application
-        android:name="com.bee.passenger.promotions_swipe.MyApplication"
         android:allowBackup="true"
         android:label="@string/app_name"
         android:icon="@mipmap/ic_bee"
@@ -53,7 +52,7 @@
         android:screenOrientation="portrait"
         android:resizeableActivity="true"
         android:theme="@style/AppTheme">
-        <service android:name="com.bee.passenger.onAppKilled" android:stopWithTask="false"/>
+        <service android:name="tech.ioengine.Login.onAppKilled" android:stopWithTask="false"/>
 
 
         <!-- mULTIWINDOWS  -->
@@ -101,27 +100,13 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
 
-        <service
-            android:name="com.bee.passenger.fcm.MyFirebaseMessagingService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
-            </intent-filter>
-        </service>
 
-        <service
-            android:name="com.bee.passenger.fcm.MyFirebaseInstanceIDService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
-            </intent-filter>
-        </service>
 
 
 
 
         <activity
-            android:name="com.bee.passenger.activity.MainActivity_App">
+            android:name="tech.ioengine.Login.activity.MainActivity_App">
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             <intent-filter>
@@ -134,86 +119,37 @@
         </activity>
 
 
-
-
         <activity
-            android:name="com.bee.passenger.fcm.MainActivity_fcm"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/TranslucentBackground">
-        </activity>
-
-
-        <activity android:name="com.bee.passenger.activity.MainActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/TranslucentBackground">
-        <intent-filter>
-            <action android:name="Start_Main"/>
-            <category android:name="android.intent.category.DEFAULT"/>
-        </intent-filter>>
-        </activity>
-
-
-        <activity
-            android:name="com.bee.passenger.activity.RegisterActivity"
+            android:name="tech.ioengine.Login.activity.RegisterActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/Translucent" />
 
         <activity
-            android:name="com.bee.passenger.activity.AboutUsActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:label="@string/nav_about" />
-
-        <activity
-            android:name="com.bee.passenger.activity.EmailLoginActivity"
+            android:name="tech.ioengine.Login.activity.EmailLoginActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
 
 
         <activity
-            android:name="com.bee.passenger.activity.PhoneAuthActivity"
+            android:name="tech.ioengine.Login.activity.PhoneAuthActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.bee.passenger.activity.PhoneRegistrationActivity"
+            android:name="tech.ioengine.Login.activity.PhoneRegistrationActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
 
 
-        <activity android:name="com.bee.passenger.promotions_swipe.PromotionsActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-
-        <activity
-            android:name="com.bee.passenger.cardview.History_CardView"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"/>
-
-
-
-        <activity
-            android:name="com.bee.passenger.activity.PrivacyPolicyActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:label="@string/activity_title_privacy_policy" />
-
-
-        <activity android:name="com.bee.passenger.activity.Facebook_Activity"
+        <activity android:name="tech.ioengine.Login.activity.Facebook_Activity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:label="@string/app_name" />
 
-        <activity android:name="com.bee.passenger.activity.SplaschScreen"
+        <activity android:name="tech.ioengine.Login.activity.SplaschScreen"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-
-        <activity android:name="com.bee.passenger.CustomerSettingsActivity"/>
-        <activity android:name="com.bee.passenger.HistorySingleActivity"/>
-        <activity android:name="com.bee.passenger.HistoryActivity"/>
 
 
         <activity android:name="com.facebook.FacebookActivity"
@@ -222,16 +158,6 @@
                 "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />
 
-
-
-        <activity
-            android:name="com.bee.passenger.airbnbmapexample.ui.activity.MapsActivity"
-            android:label="@string/title_activity_maps" />
-        <activity android:name="com.bee.passenger.airbnbmapexample.ui.activity.SearchPlaceOnMapActivity" />
-        <activity android:name="com.bee.passenger.airbnbmapexample.ui.activity.ShowDirectionActivity" />
-        <activity android:name="com.bee.passenger.airbnbmapexample.ui.activity.MovingMarkerActivity" />
-        <activity android:name="com.bee.passenger.airbnbmapexample.ui.activity.ListViewActivity" />
-        <activity android:name="com.bee.passenger.airbnbmapexample.ui.activity.RecyclerViewLiteModeMapActivity"></activity>
 
 
 
